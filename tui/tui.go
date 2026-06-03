@@ -181,13 +181,13 @@ func (m *Model) addLog(msg, level string) {
 
 func (m Model) columns() []table.Column {
 	w := m.width - 4
-	if w < 60 {
-		w = 60
+	if w < 70 {
+		w = 70
 	}
-	appW := w * 30 / 100
-	verW := w * 15 / 100
-	latestW := w * 15 / 100
-	srcW := w * 8 / 100
+	appW := w * 25 / 100
+	verW := w * 20 / 100
+	latestW := w * 20 / 100
+	srcW := w * 7 / 100
 	statusW := w - 3 - appW - verW - latestW - srcW
 	return []table.Column{
 		{Title: " ", Width: 3},
