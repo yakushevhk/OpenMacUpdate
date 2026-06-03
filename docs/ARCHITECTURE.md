@@ -1,11 +1,11 @@
 # Architecture
 
-How OpenMacUpdate works internally.
+How MacUpdate works internally.
 
 ## Project Structure
 
 ```
-OpenMacUpdate/
+MacUpdate/
 ├── main.go                    # Entry point, --help, --version
 ├── tui/tui.go                 # Terminal UI (Bubble Tea)
 ├── scan/scan.go               # App scanner (Info.plist parsing)
@@ -32,7 +32,7 @@ OpenMacUpdate/
 │                    Startup                               │
 │                                                         │
 │  1. Load Database                                       │
-│     ├─ Check ~/.cache/openmacupdate/apps.json (< 24h)   │
+│     ├─ Check ~/.cache/macupdate/apps.json (< 24h)   │
 │     ├─ If stale → fetch from GitHub raw URL             │
 │     └─ If offline → use stale cache                     │
 │                                                         │
@@ -135,7 +135,7 @@ stateLoading → stateReady
 **Layout:**
 ```
 ┌─ Header ──────────────────────────┐
-│ OpenMacUpdate  [spinner] [bar]    │
+│ MacUpdate  [spinner] [bar]    │
 │ 191 apps  8 updates  28 ok       │
 ├─ Table ───────────────────────────┤
 │ * Firefox    130.0   131.0  UPDATE│

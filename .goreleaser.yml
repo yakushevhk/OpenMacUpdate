@@ -34,7 +34,7 @@ homebrew_casks:
       owner: yakushevhk
       name: homebrew-tap
       token: "{{ .Env.HOMEBREW_TAP_GITHUB_TOKEN }}"
-    homepage: "https://github.com/yakushevhk/OpenMacUpdate"
+    homepage: "https://github.com/yakushevhk/macupdate"
     description: "Update all apps on macOS — Sparkle, Homebrew Casks, Mac App Store"
     license: "MIT"
     hooks:

@@ -14,9 +14,9 @@ import (
 	"github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
 
-	"github.com/yakushev/OpenMacUpdate/db"
-	"github.com/yakushev/OpenMacUpdate/scan"
-	"github.com/yakushev/OpenMacUpdate/update"
+	"github.com/yakushevhk/macupdate/db"
+	"github.com/yakushevhk/macupdate/scan"
+	"github.com/yakushevhk/macupdate/update"
 )
 
 type state int
@@ -731,7 +731,7 @@ func (m Model) View() string {
 	var b strings.Builder
 	b.WriteString("\n")
 
-	title := lipgloss.NewStyle().Foreground(cPrimary).Bold(true).Render(" OpenMacUpdate")
+	title := lipgloss.NewStyle().Foreground(cPrimary).Bold(true).Render(" MacUpdate")
 	b.WriteString(" " + title)
 	if m.checking {
 		b.WriteString("  " + m.spinner.View() + m.progressView())

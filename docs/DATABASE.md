@@ -1,6 +1,6 @@
 # Database
 
-How the OpenMacUpdate database works.
+How the MacUpdate database works.
 
 ## Overview
 
@@ -12,7 +12,7 @@ BundleID → { Sparkle feed URL, Cask name, Version check URL, ... }
 
 The database is:
 - Pulled from GitHub on every run
-- Cached locally for 24 hours in `~/.cache/openmacupdate/apps.json`
+- Cached locally for 24 hours in `~/.cache/macupdate/apps.json`
 - Updated weekly via automated Homebrew Cask sync
 
 ## Structure

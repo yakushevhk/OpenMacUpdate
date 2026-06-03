@@ -19,8 +19,8 @@ Requirements:
 - macOS
 
 ```bash
-git clone https://github.com/yakushevhk/OpenMacUpdate.git
-cd OpenMacUpdate
+git clone https://github.com/yakushevhk/macupdate.git
+cd macupdate
 go build -o macbee .
 ./macbee
 ```
@@ -36,15 +36,15 @@ Homebrew is used for cask integration — if you have Homebrew installed, it wor
 
 ## Binary Releases
 
-Download pre-built binaries from [Releases](https://github.com/yakushevhk/OpenMacUpdate/releases).
+Download pre-built binaries from [Releases](https://github.com/yakushevhk/macupdate/releases).
 
 Available:
-- `OpenMacUpdate_X.Y.Z_darwin_arm64.zip` — Apple Silicon
-- `OpenMacUpdate_X.Y_Z_darwin_amd64.zip` — Intel
+- `MacUpdate_X.Y.Z_darwin_arm64.zip` — Apple Silicon
+- `MacUpdate_X.Y_Z_darwin_amd64.zip` — Intel
 
 After downloading:
 ```bash
-unzip OpenMacUpdate_*.zip
+unzip MacUpdate_*.zip
 chmod +x macbee
 ./macbee
 ```
@@ -67,4 +67,4 @@ No configuration file needed. The app works out of the box.
 | `MACBEE_DB` | Path to custom database file | Remote from GitHub |
 
 **Cache location:**
-- `~/.cache/openmacupdate/apps.json` — cached database (24h TTL)
+- `~/.cache/macupdate/apps.json` — cached database (24h TTL)

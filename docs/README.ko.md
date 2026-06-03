@@ -1,12 +1,12 @@
-# OpenMacUpdate
+# MacUpdate
 
 **Mac 앱 전체 업데이트 — 무료, 오픈소스, 가입 불필요**
 
-OpenMacUpdate는 설치된 앱을 스캔하고 **Sparkle**, **Homebrew Casks**, **Mac App Store**에서 업데이트를 확인합니다 — 하나의 터미널에서 모두 처리.
+MacUpdate는 설치된 앱을 스캔하고 **Sparkle**, **Homebrew Casks**, **Mac App Store**에서 업데이트를 확인합니다 — 하나의 터미널에서 모두 처리.
 
 > 데이터베이스에 **60,000개 이상의 앱** 포함. 완전 오픈소스. 가입 불필요, 추적 없음, 제한 없음.
 
-![OpenMacUpdate TUI](docs/screenshot.png)
+![MacUpdate TUI](docs/screenshot.png)
 
 ---
 
@@ -53,8 +53,8 @@ brew install --cask macbee
 ### 소스에서 설치
 
 ```bash
-git clone https://github.com/yakushevhk/OpenMacUpdate.git
-cd OpenMacUpdate
+git clone https://github.com/yakushevhk/macupdate.git
+cd macupdate
 go build -o macbee .
 ./macbee
 ```

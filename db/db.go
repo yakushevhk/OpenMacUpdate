@@ -11,7 +11,7 @@ import (
 )
 
 const (
-	remoteURL   = "https://raw.githubusercontent.com/yakushevhk/OpenMacUpdate/main/db/apps.json"
+	remoteURL   = "https://raw.githubusercontent.com/yakushevhk/macupdate/main/db/apps.json"
 	cacheMaxAge = 24 * time.Hour
 )
 
@@ -44,10 +44,10 @@ type Database struct {
 
 func cacheDir() string {
 	if d := os.Getenv("XDG_CACHE_HOME"); d != "" {
-		return filepath.Join(d, "openmacupdate")
+		return filepath.Join(d, "macupdate")
 	}
 	home, _ := os.UserHomeDir()
-	return filepath.Join(home, ".cache", "openmacupdate")
+	return filepath.Join(home, ".cache", "macupdate")
 }
 
 func cachePath() string {

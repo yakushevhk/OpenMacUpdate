@@ -5,7 +5,7 @@ import (
 	"os"
 
 	tea "github.com/charmbracelet/bubbletea"
-	"github.com/yakushev/OpenMacUpdate/tui"
+	"github.com/yakushevhk/macupdate/tui"
 )
 
 var version = "dev"
@@ -14,7 +14,7 @@ func main() {
 	if len(os.Args) > 1 {
 		switch os.Args[1] {
 		case "--help", "-h":
-			fmt.Println("OpenMacUpdate — update all apps on macOS")
+			fmt.Println("MacUpdate — update all apps on macOS")
 			fmt.Println()
 			fmt.Println("Usage: macbee")
 			fmt.Println()

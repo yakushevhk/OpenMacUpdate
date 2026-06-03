@@ -1,4 +1,4 @@
-# OpenMacUpdate
+# MacUpdate
 
 **Update All Apps on Mac — Free, Open Source, No Signup Required**
 
@@ -6,11 +6,11 @@
 
 ## The Open-Source macOS App Update Checker
 
-OpenMacUpdate scans your installed applications and checks for updates across **Sparkle feeds**, **Homebrew Casks**, and the **Mac App Store** — all from a single fast terminal UI.
+MacUpdate scans your installed applications and checks for updates across **Sparkle feeds**, **Homebrew Casks**, and the **Mac App Store** — all from a single fast terminal UI.
 
 > 60,000+ apps in the database. Fully open source. No tracking, no accounts, no BS.
 
-![OpenMacUpdate TUI](docs/screenshot.png)
+![MacUpdate TUI](docs/screenshot.png)
 
 ---
 

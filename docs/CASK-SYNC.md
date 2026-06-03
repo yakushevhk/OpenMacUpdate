@@ -64,7 +64,7 @@ go build -o cask-sync ./cmd/cask-sync
 
 Output:
 ```
-=== OpenMacUpdate Cask Sync ===
+=== MacUpdate Cask Sync ===
 
 Loaded database: 60623 entries
 Fetching Homebrew Cask API...

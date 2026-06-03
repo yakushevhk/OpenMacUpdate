@@ -53,7 +53,7 @@ type Database struct {
 }
 
 func main() {
-	fmt.Println("=== OpenMacUpdate Cask Sync ===")
+	fmt.Println("=== MacUpdate Cask Sync ===")
 	fmt.Println()
 
 	// Load local database

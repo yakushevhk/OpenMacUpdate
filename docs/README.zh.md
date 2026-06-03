@@ -1,12 +1,12 @@
-# OpenMacUpdate
+# MacUpdate
 
 **Mac 应用批量更新工具 — 免费开源，无需注册**
 
-OpenMacUpdate 扫描已安装应用，通过 **Sparkle**、**Homebrew Casks** 和 **Mac App Store** 检查更新 — 全部在一个终端界面完成。
+MacUpdate 扫描已安装应用，通过 **Sparkle**、**Homebrew Casks** 和 **Mac App Store** 检查更新 — 全部在一个终端界面完成。
 
 > 数据库包含 **60,000+ 应用**。完全开源。无注册、无追踪、无限制。
 
-![OpenMacUpdate TUI](docs/screenshot.png)
+![MacUpdate TUI](docs/screenshot.png)
 
 ---
 
@@ -53,8 +53,8 @@ brew install --cask macbee
 ### 从源码安装
 
 ```bash
-git clone https://github.com/yakushevhk/OpenMacUpdate.git
-cd OpenMacUpdate
+git clone https://github.com/yakushevhk/macupdate.git
+cd macupdate
 go build -o macbee .
 ./macbee
 ```

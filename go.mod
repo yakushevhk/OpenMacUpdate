@@ -1,4 +1,4 @@
-module github.com/yakushev/OpenMacUpdate
+module github.com/yakushevhk/macupdate
 
 go 1.26.4
 
