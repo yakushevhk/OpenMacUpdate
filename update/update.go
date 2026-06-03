@@ -56,6 +56,10 @@ func FetchFeed(url string) (*UpdateInfo, error) {
 	}
 
 	latest := appcast.Channel.Items[0]
+	if latest.Enclosure == nil {
+		return nil, nil
+	}
+
 	info := &UpdateInfo{
 		LatestVersion: latest.Enclosure.ShortVersionString,
 		DownloadURL:   latest.Enclosure.URL,

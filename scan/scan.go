@@ -3,6 +3,7 @@ package scan
 import (
 	"os"
 	"path/filepath"
+	"runtime"
 
 	"howett.net/plist"
 )
@@ -14,6 +15,8 @@ type AppInfo struct {
 	Version    string
 	Build      string
 	FeedURL    string
+	FeedURLARM string
+	Arch       string
 }
 
 func readPlist(path string) (map[string]interface{}, error) {
@@ -50,6 +53,7 @@ func ScanDir(dir string) ([]AppInfo, error) {
 			Name:    e.Name()[:len(e.Name())-4],
 			Path:    appPath,
 			FeedURL: plistString(data, "SUFeedURL"),
+			Arch:    runtime.GOARCH,
 		}
 
 		if bid, ok := data["CFBundleIdentifier"]; ok {
@@ -68,7 +72,29 @@ func ScanDir(dir string) ([]AppInfo, error) {
 }
 
 func ScanDefault() ([]AppInfo, error) {
-	return ScanDir("/Applications")
+	var allApps []AppInfo
+
+	dirs := []string{"/Applications"}
+
+	if home, err := os.UserHomeDir(); err == nil {
+		dirs = append(dirs, filepath.Join(home, "Applications"))
+	}
+
+	seen := make(map[string]bool)
+	for _, dir := range dirs {
+		apps, err := ScanDir(dir)
+		if err != nil {
+			continue
+		}
+		for _, app := range apps {
+			if !seen[app.BundleID] {
+				seen[app.BundleID] = true
+				allApps = append(allApps, app)
+			}
+		}
+	}
+
+	return allApps, nil
 }
 
 func toString(v interface{}) string {
