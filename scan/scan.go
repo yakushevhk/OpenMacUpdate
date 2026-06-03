@@ -17,15 +17,14 @@ type AppInfo struct {
 }
 
 func readPlist(path string) (map[string]interface{}, error) {
-	f, err := os.Open(path)
+	data, err := os.ReadFile(path)
 	if err != nil {
 		return nil, err
 	}
-	defer f.Close()
 
-	var data map[string]interface{}
-	_, err = plist.Unmarshal(f, &data)
-	return data, err
+	var result map[string]interface{}
+	_, err = plist.Unmarshal(data, &result)
+	return result, err
 }
 
 func ScanDir(dir string) ([]AppInfo, error) {
