@@ -47,7 +47,14 @@ The database is pulled from this repository on every run and cached locally for 
 
 ## Getting Started
 
-### Install
+### Install via Homebrew (recommended)
+
+```bash
+brew tap yakushevhk/tap
+brew install --cask macbee
+```
+
+### Install from source
 
 ```bash
 git clone https://github.com/yakushevhk/OpenMacUpdate.git
@@ -59,13 +66,18 @@ go build -o macbee .
 ### Requirements
 
 - **macOS** (primary target)
-- **Go 1.21+** (for building from source)
 - **Homebrew** (optional, for cask integration)
 - **mas-cli** (optional, for App Store integration)
 
 ```bash
 # Optional dependencies
 brew install mas
+```
+
+### Update
+
+```bash
+brew upgrade --cask macbee
 ```
 
 ---

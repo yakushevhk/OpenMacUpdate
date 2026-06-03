@@ -43,6 +43,15 @@ OpenMacUpdateはインストール済みアプリをスキャンし、**Sparkle*
 
 ## インストール
 
+### Homebrewでインストール（推奨）
+
+```bash
+brew tap yakushevhk/tap
+brew install --cask macbee
+```
+
+### ソースからインストール
+
 ```bash
 git clone https://github.com/yakushevhk/OpenMacUpdate.git
 cd OpenMacUpdate
@@ -53,12 +62,17 @@ go build -o macbee .
 ### 必要要件
 
 - **macOS**
-- **Go 1.21+**（ソースからビルドする場合）
 - **Homebrew**（オプション、cask連携用）
 - **mas-cli**（オプション、App Store連携用）
 
 ```bash
 brew install mas
+```
+
+### アップデート
+
+```bash
+brew upgrade --cask macbee
 ```
 
 ---

@@ -43,6 +43,15 @@ OpenMacUpdate сканирует установленные приложения
 
 ## Установка
 
+### Через Homebrew (рекомендуется)
+
+```bash
+brew tap yakushevhk/tap
+brew install --cask macbee
+```
+
+### Из исходников
+
 ```bash
 git clone https://github.com/yakushevhk/OpenMacUpdate.git
 cd OpenMacUpdate
@@ -53,12 +62,17 @@ go build -o macbee .
 ### Требования
 
 - **macOS**
-- **Go 1.21+** (для сборки из исходников)
 - **Homebrew** (опционально, для cask интеграции)
 - **mas-cli** (опционально, для App Store интеграции)
 
 ```bash
 brew install mas
+```
+
+### Обновление
+
+```bash
+brew upgrade --cask macbee
 ```
 
 ---

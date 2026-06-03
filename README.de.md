@@ -43,6 +43,15 @@ Die Datenbank wird bei jedem Start aus dem Repository geladen und 24 Stunden lok
 
 ## Installation
 
+### Via Homebrew (empfohlen)
+
+```bash
+brew tap yakushevhk/tap
+brew install --cask macbee
+```
+
+### Aus Quellcode
+
 ```bash
 git clone https://github.com/yakushevhk/OpenMacUpdate.git
 cd OpenMacUpdate
@@ -53,12 +62,17 @@ go build -o macbee .
 ### Voraussetzungen
 
 - **macOS**
-- **Go 1.21+** (für Build aus Quellcode)
 - **Homebrew** (optional, für Cask-Integration)
 - **mas-cli** (optional, für App Store Integration)
 
 ```bash
 brew install mas
+```
+
+### Aktualisierung
+
+```bash
+brew upgrade --cask macbee
 ```
 
 ---
