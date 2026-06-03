@@ -27,19 +27,3 @@ changelog:
     exclude:
       - "^docs:"
       - "^test:"
-
-homebrew_casks:
-  - name: macbee
-    repository:
-      owner: yakushevhk
-      name: homebrew-tap
-      token: "{{ .Env.HOMEBREW_TAP_GITHUB_TOKEN }}"
-    homepage: "https://github.com/yakushevhk/macupdate"
-    description: "Update all apps on macOS — Sparkle, Homebrew Casks, Mac App Store"
-    license: "MIT"
-    hooks:
-      post:
-        install: |
-          if OS.mac?
-            system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/macbee"]
-          end
